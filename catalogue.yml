@@ -1,0 +1,9 @@
+-name: setup catalogue component
+ hosts: all
+ become :yes
+ vars:
+   component: catalogue
+ tasks:
+      -name: load nodejs
+       ansible.builtin.include_tasks:
+          file: nodejs.yml
